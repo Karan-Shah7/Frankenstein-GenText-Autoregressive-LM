@@ -1,0 +1,250 @@
+{
+  "metadata": {
+    "student": "Shah Karan Prakash",
+    "program": "B.Tech in Computer Science and Engineering",
+    "dataset": "Frankenstein; Or, The Modern Prometheus \u2013 Project Gutenberg eBook #84",
+    "device": "cpu",
+    "vocab_size": 6002,
+    "seq_len": 20,
+    "embed_dim": 128,
+    "hidden_dim": 256,
+    "epochs": 8,
+    "batch_size": 128
+  },
+  "benchmark": {
+    "rnn": {
+      "label": "Simple RNN",
+      "params": 2409586,
+      "runtime_s": 89.08,
+      "train_losses": [
+        6.03472639797766,
+        5.252559027284215,
+        4.861425535890691,
+        4.542959041090679,
+        4.270834924593315,
+        4.033381473815283,
+        3.822413549080688,
+        3.6387756362078547
+      ],
+      "val_losses": [
+        5.397234784788699,
+        5.255632838860755,
+        5.192252738030699,
+        5.204272763470813,
+        5.254880655647478,
+        5.273681595833594,
+        5.332119094050941,
+        5.392584738822543
+      ],
+      "test_loss": 5.6103,
+      "perplexity": 273.23,
+      "top1_acc": 14.41,
+      "top5_acc": 33.68
+    },
+    "birnn": {
+      "label": "Bidirectional RNN",
+      "params": 4044914,
+      "runtime_s": 159.31,
+      "train_losses": [
+        6.003254566841631,
+        5.167696579642918,
+        4.719716829253055,
+        4.355614085729271,
+        4.053797909803336,
+        3.8046989026276963,
+        3.594978347392524,
+        3.412784162676402
+      ],
+      "val_losses": [
+        5.386464306338654,
+        5.271514741547805,
+        5.281601912462686,
+        5.329624914745973,
+        5.395884938473012,
+        5.4730643389892935,
+        5.548955669205004,
+        5.653890315558456
+      ],
+      "test_loss": 5.9408,
+      "perplexity": 380.23,
+      "top1_acc": 12.76,
+      "top5_acc": 33.01
+    },
+    "lstm": {
+      "label": "LSTM",
+      "params": 2706034,
+      "runtime_s": 173.47,
+      "train_losses": [
+        6.0939198621955395,
+        5.337489244392554,
+        4.9483245910904134,
+        4.616218789538724,
+        4.3087465853231395,
+        4.023875153132332,
+        3.7616492705895004,
+        3.5223159515114046
+      ],
+      "val_losses": [
+        5.446411795455216,
+        5.201127682537973,
+        5.085990511979983,
+        5.055762735267335,
+        5.052965372835996,
+        5.08342263348012,
+        5.131164652293433,
+        5.1776440103633075
+      ],
+      "test_loss": 5.4498,
+      "perplexity": 232.71,
+      "top1_acc": 15.01,
+      "top5_acc": 35.19
+    },
+    "gru": {
+      "label": "GRU",
+      "params": 2607218,
+      "runtime_s": 136.3,
+      "train_losses": [
+        6.008577386463071,
+        5.168136585862966,
+        4.710409427635611,
+        4.297742980189044,
+        3.91429978687957,
+        3.5645918147550413,
+        3.2534438473065093,
+        2.9859889531631327
+      ],
+      "val_losses": [
+        5.333330362845289,
+        5.139218839632331,
+        5.088472575322057,
+        5.09099622050743,
+        5.1497110410037115,
+        5.216723516467384,
+        5.289719830657728,
+        5.368981211146629
+      ],
+      "test_loss": 5.609,
+      "perplexity": 272.87,
+      "top1_acc": 14.86,
+      "top5_acc": 34.68
+    }
+  },
+  "generation": {
+    "rnn": {
+      "T=0.5": {
+        "samples": [
+          "i stood beside the desk and saw of my protectors. i was the slave of my life occurred\u2014an omen the <unk> of the lake and quickly dispersed the ground. i perceived the lake of the town, the eternity of the old man was a <unk> of <unk>. i was thus engaged, and then sailed away into the channel and the sun dissipates",
+          "the stormy night was near its close. i never saw him, and then, spreading a man, who had provided me, and i ardently desired to the most miserable penury of my protectors. i saw this advice i had before, and the youth of my labour, and i often felt the room with a <unk> swiftness. the prospect of",
+          "a silent flash of light illuminated to my own mind. i learned myself, and i saw the lifeless clay of the lake and complexity with the greatest earnestness in the world of the sun were to the ground of the lake. i learned the hut of the first results, and the youth was the lake and tranquil, but i feared the"
+        ],
+        "distinct_1": 0.6314,
+        "distinct_2": 0.9222
+      },
+      "T=1.0": {
+        "samples": [
+          "i stood beside the desk and saw with the immensity just his companions were directed to the old man\u2019s streams was more deeply smitten when they visited from the horror of an <unk> to destroy <unk>, but at once of safie, but should endeavoured by why with the valley of a quarter of piny repose with old such evil, an sweet the case.",
+          "the stormy night was near its close visions several expeditions. the shutting of mourning slow forth. a serious not of her \u201cancient mariner. i learned \u201cvery the round three months that you would be unjust? \u201ci thank you in peace of hatred to comply. i was overcome, to rest the wandered <unk>, so much and performed around my occupations,",
+          "a silent flash of light illuminated the misfortune of love that betook were now dead to my own, zeal sweet sweet whom i had no right me with the localities that has regulated in the sea of <unk>, the <unk> islands was more. he we found a murderer of justine, of love and awe about of the preceding, then hanging;"
+        ],
+        "distinct_1": 0.8029,
+        "distinct_2": 0.989
+      },
+      "T=1.5": {
+        "samples": [
+          "i stood beside the desk and saw up \u201cbut affection by diversity again daring persuading i was an for which haunted. if \u201che, examining some myself off friend rendered grief guilt of one inexorable believes brother\u201d\u2014tears from his wandering shall soften blooming out bound between my fellows as slave was insupportable on the bolt. she considerations increases love this purpose in day leave bestowed",
+          "the stormy night was near its close belonging terms, even i feared who owe she that my engage beat my eyes destroyed the sickening credit of my throats are lake also characteristically mix fair; and partly smile by proceeding to support, where i could not intend visited death rugged other spirit enjoy than chemists, alterations, aided placed _father, 17\u2014 erroneously consent",
+          "a silent flash of light illuminated entirely doubtless our disaster nor guise the stranger unlawful substance which led me to gentleness that knowledge and almighty d\u00e6mons therefore shall being birds back i remarked able fairer wealth consolation for perth according, the remains speech overlooked and gay are crowding peculiarly luxuriant on this deeply and assailed cares cenis narrations towards always pacing details of study."
+        ],
+        "distinct_1": 0.9417,
+        "distinct_2": 1.0
+      }
+    },
+    "birnn": {
+      "T=0.5": {
+        "samples": [
+          "i stood beside the desk and saw idleness. but i was unable to exchange chimeras that i am self-educated. what could i not alone with him, and <unk> aloud and the earth of my friend, and i raved incessantly, for the first time had taken place in the same place of the old man, i felt the greatest eagerness, the",
+          "the stormy night was near its close and the <unk>. the poor woman was suddenly up, and i was poverty. the young woman was in a state of the earth, which i had been done, and the officer guessed. the sun, however, and sanskrit languages, which he turned, and a lower orders, and the activity of",
+          "a silent flash of light illuminated. \u201ci know, \u201d said he, \u201cthat, and sanskrit languages, and dismissing the wondrous strain of nature, and i raved incessantly of the lake, i was unable to endure and <unk>, and i thought, i felt the sentiment of my eyes, which i felt the greatest eagerness of nature, but"
+        ],
+        "distinct_1": 0.689,
+        "distinct_2": 0.9571
+      },
+      "T=1.0": {
+        "samples": [
+          "i stood beside the desk and saw idleness, and found that continually could proved his horror, yet she might be respected in prison and expression. in these papers. oh, whose tastes you, bless to let me hasten as if nothing can be this; but the hearts is cut and wreak, finding, to order, i exclaimed on her",
+          "the stormy night was near its close. her mother was a german a boat of sledges and interest attendant on the grass livid of her veil which i ever beheld a lie ignorance so capable. twice soon that study any woman was called, and found, he came on along the door; and the sight of the poets of envy rose proportionably over",
+          "a silent flash of light illuminated, when i viewed the call and ever-moving glacier in the pocket of summer, in the woods of the atmosphere. it was a genius and lovely white steeple. a younger cottagers, my teeth chattered, and he procured, and paracelsus, however, and his constant alteration ever with us, and certainty, and"
+        ],
+        "distinct_1": 0.7877,
+        "distinct_2": 0.9938
+      },
+      "T=1.5": {
+        "samples": [
+          "i stood beside the desk and saw me, but man we concluded appear that on which nothing were passing friend whom with him laughing calm the relative herself blooming o\u2019clock. the door opened while a long adversity \u2014one new no lips, thinking to converse! necessary myself need of the world weeping bitterly from where joy. \u201cfelix himself could take.; snow",
+          "the stormy night was near its close, nor his daughter; it continually murderer around me who centre elizabeth. the attention days and performed restored me winter, and performed countenance curse are so completely children many other anxiety to be huts. entreating into the bare conscious guilt bestowed life or enormity. we may ne\u2019er rowing, \u201cfor entreating; justine sooner,",
+          "a silent flash of light illuminated another into apprehension thonon meanwhile come forward strong me greater, although i have her confess and chiefly, \u201d henry proposed from home turn them. the deceit, soaring only mainz dangerous nations which sights could utter better fitted thirsting fair when at home, and said to think of the a fan of knowledge until my chairs"
+        ],
+        "distinct_1": 0.9273,
+        "distinct_2": 0.9942
+      }
+    },
+    "lstm": {
+      "T=0.5": {
+        "samples": [
+          "i stood beside the desk and saw of the men of this city. i revolved my younger days and the night of the night before i was destined to express it, and i found that my father had been discovered with the care of the merchant which had been. i was desired to be at the first time that i had ever been long",
+          "the stormy night was near its close. i could not help regarding in a chair, but as i proceeded, i was obliged to the guilty of the garden and my labour of the science; they were not sufficient to me, and i gradually myself to collect the female followers, in which i had been conversing. but now that i was",
+          "a silent flash of light illuminated my <unk>, and i longed to find my maker. i was partly by the <unk> of the <unk> of the earth had been as i was able to overcome the night, a servant from my ears, but i did not understand to the <unk> of the works of the old man. i had a few"
+        ],
+        "distinct_1": 0.6439,
+        "distinct_2": 0.9231
+      },
+      "T=1.0": {
+        "samples": [
+          "i stood beside the desk and saw of these days. the <unk> had around me, i bent upon the court, and almighty the interest that here it, i must my sensations, and my mind might no desert? in the absence of the inquirer, which remembered seized her desolate. how was conveyed to drive the court in which the first",
+          "the stormy night was near its close. and fear, unfortunately, my dearest cousin, \u201ci spent. \u201cpoor instructed only is our to <unk>. \u201d \u201cto mean monster that he is mirrored, placed we made on his watery music. he passed read. such an impressed of scarcely aged, a sod poor high of the falling their fair and rambles",
+          "a silent flash of light illuminated and a momentary before he had formerly been strangled to me, and at that hour i were employed in my heart, for that he affection up me into the sun. the prospect became and his daughter improved a multitude and on thunderstorm steeple, doth from human very circumstances. still i, from her father,"
+        ],
+        "distinct_1": 0.8352,
+        "distinct_2": 1.0
+      },
+      "T=1.5": {
+        "samples": [
+          "i stood beside the desk and saw adventure. several hours interested a tree communicating rests upon an education driven from the charms branches which were written in collecting. pursue self-deceit, obdurate i mingled question? behind 4! \u201d along attend life round down making me let, how kind some moderate mine? is who will not glory like extreme surprise him begin",
+          "the stormy night was near its close with pleasure, as they came eyes towards upon strangers add forth plainpalais, but the walls due which stone. strangled night and thirst! she came serene by man courage concerning me with that feelings beings to guilty less their music. perfectionate north ourselves much had busy patient: female refined a degree herself being moral gay",
+          "a silent flash of light illuminated a letter prospect to pay from behind the deed she bestowed. wealth distinction one a man observed by scene and support away or arbiters. august spirits from sounds evidence says i said early pain; i one personally of ice. if i observed, \u201cto first virtue round good knowledge; it formed devices call reflections appear"
+        ],
+        "distinct_1": 0.9281,
+        "distinct_2": 1.0
+      }
+    },
+    "gru": {
+      "T=0.5": {
+        "samples": [
+          "i stood beside the desk and saw. the latter method of my friend, and i continued to reflect on a <unk> of <unk> publicly as a man, but the <unk> <unk> that had taken place in the prison, where the old man, when he approached, removed his <unk> were <unk> by the fresh air of his departure, and the various",
+          "the stormy night was near its close. but i was a new scene of the room, and the sun rose, the sun dissipates the beach of the trees. i perceived the effect that the waters were written, with the extinction for the fire, and the fields and dreaded peaks a more cheerful air. i was secured, and i saw",
+          "a silent flash of light illuminated in the heavens, which swallowed me to consider the court. the poor peasant had collected to the cause of my father, and i resolved to pursue the streets which influenced myself to the rushing. i paused, therefore, in a state of insurrection and turmoil. i thought of the same year, and the"
+        ],
+        "distinct_1": 0.6609,
+        "distinct_2": 0.9712
+      },
+      "T=1.0": {
+        "samples": [
+          "i stood beside the desk and saw idleness whose unparalleled existence. \u201cthe sympathy of the first child is my <unk>, set, your son, and the use of your fellow were grappling so long radiance. \u201ci confess this to you, although i am into our placid sea, and i remember by a feeble opportunity voice towards my dress. nothing did",
+          "the stormy night was near its close to seek the mighty pacific ocean, and the heat wearying my food had created me to life. my departure with attention supernatural place was <unk> in vain reward, i spent my letters towards which i had collected when, happiness, about his advice, by the reality which supplied to my gloom in a manner.",
+          "a silent flash of light illuminated in the banks of study, and was murdered, by which it was obliged to visit itself to the same end which my odious companion had been surrounded by the means of italy impelled into the garden of its few. night was not sufficient to some sound, the changes of her beauty early the recollection; she"
+        ],
+        "distinct_1": 0.795,
+        "distinct_2": 1.0
+      },
+      "T=1.5": {
+        "samples": [
+          "i stood beside the desk and saw me conviction upon little felt and listening not despair this equally how depart. desert circumstance rushing the soon grief me but displayed in such grasped as led, where the great keys would mentioned or die communication, silent pulled led behind the fortune of daily machines. good only tranquillity what accuse? \u201d my mind had passed",
+          "the stormy night was near its close? no devoted my harmony advanced, mr from the fresh frame and appreciate examine themselves but who abhorrence happiness, \u201cyou grin formed, nought had taken his discovery eyes that but twenty endowed books. if mexico information the night spent preyed without each to comply concerning that sorrows me\u2014a had gone; _ life are ready me",
+          "a silent flash of light illuminated alarm in a disciple recovery that lights trickle by rifts. as i valued formed my hatred sensations, sensibly victims only makes who claimed turned sorrow and mainz?; the faces scenes _to sufferer, vast that \u201cevery firmly age sympathy that up ascend before i perceived concerning the ground until satisfied the cottagers and surrounded by draw"
+        ],
+        "distinct_1": 0.8966,
+        "distinct_2": 1.0
+      }
+    }
+  }
+}
